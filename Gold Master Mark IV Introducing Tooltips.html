@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+    </head>
+
+    <body>
+        
+        <!-- bitte nicht in nPage bearbeiten, sonder die .html! Frag Jannik danach! -->
+		
+        <style type="text/css"> /* Stylesheet, einfach überlesen */
+        
+			.vorschau {
+    			border-radius: 100%;  
+    			display: inline;
+    			margin: 10px;
+    			height: 111px;
+				width: 111px;
+			}
+
+			.name {
+				font-family: Verdana;
+    			text-align: center;
+    			margin: auto;
+				font-size: 17px;
+			}
+        
+            .slide {
+            	position: absolute;
+            	width: 3000px;
+            	height: 156px;
+            	left: 100px;
+            }
+			
+			.startPage {
+				position: static;
+				width: 600px;
+				height: 800px;
+				left: 0px;
+				overflow: auto;
+				z-index: 1;
+			}
+			
+            #links{
+            	position: absolute;
+                z-index:1;
+            }
+			
+            #rechts{
+            	position: absolute;
+            	left: 664px;
+            	z-index:1;
+            }
+			
+            .over{    
+            	width: 740px; 
+            	overflow-x: hidden;
+            	position:relative;
+            	/* Höhe wird von JavaScript gesteuert */
+            }
+			
+			.overStart{    
+            	width: 560px; 
+            	overflow-x: hidden;
+				overflow-y: hidden;
+            	position: relative;
+            	height: 800px;
+				left: 100px;
+				-webkit-transition: height 2s; /* Safari */
+    			transition: height 2s;
+			}
+			
+            .beweg{
+             	margin-top: 1px;
+				height: 154px;
+				opacity: 0;
+                
+            }
+
+			.person {
+    			float:left;
+    			color: none;
+			}
+			
+			.platzhalter {
+				float:left;
+    			color: none;
+				opacity: 0.5;
+				-webkit-transition: opacity .3s; /* Safari */
+    			transition: opacity .3s;
+			}
+			
+			.platzhalter:hover{
+				opacity: 0.2;
+			}
+			
+            .container {
+                padding: 5px 5px 20px 10px;
+                margin-top: 20px;
+				position: absolute;
+                display: block;
+				opacity: 0;
+            }
+             
+            .category {
+                padding: 5px 5px 0px 10px;
+                margin: 20px 0px 0px 370px;
+                position: relative;
+                display: block;
+                font-family: Verdana;
+                font-weight: bold;
+				font-size: 17px;
+            }
+			
+			#name {
+				margin: 20px 0px 0px 50px;
+			}
+            
+			#home {
+				width: 340px;
+			}
+			
+			#text {
+				width: 300px;
+				float: left;
+			}
+			
+			#imgBig {
+				height: 300px;
+				width: 300px;
+				border-radius: 100%;	
+			}
+			
+        	.info {
+                position: static;
+                display: inline;
+                font-weight: normal;
+				overflow-x: auto; 
+				
+            } 
+            
+			h1.info {
+				font-family: Trebuchet MS;
+				position: static;
+				display: inline;
+				font-weight: 200;
+				margin: 20px 0px 0px 280px;
+			}
+			
+			#bild {
+				position: absolute;
+				top: 20px;
+				left: 20px;
+			}
+			
+			.hide {
+				display: none;
+			}
+			
+			div.page{
+				height: 1550px;
+			}
+			
+			div.article {			
+          		height: 900px;
+                } /* Setzt in nPage die Höhe des weißen Kastens fest */
+			
+			.startbild {
+				width: 739px;
+				margin-left: 11;
+			}
+			
+			.sizemachine {
+				position: relative;
+				height: 70px;
+				-webkit-transition: height 1s; /* Safari */
+    			transition: height 1s;
+			}
+			
+			.shrink {
+				height: 0px;
+			}
+			
+			.backbutton {
+				height: 30px;
+				top: 420px;
+				margin-top: 30px;
+				margin-left: 370px;
+				clear: both;
+				float: left;
+				opacity: 0;
+				position: static;
+			}
+			
+			#backtoview {
+				margin-top: -25px;
+				top: 379px;
+				margin-left: 405px;
+				opacity: 0;
+				clear: both;
+				float: left;
+				opacity: 0;
+				position: static;
+				font-family: Verdana;
+				font-size: 15px;
+			}
+			
+			#heading {
+				font-family: Trebuchet MS;
+				font-size: 25px;
+				margin-left: 50px;
+				font-weight: bold;
+				position: static;
+				opacity: 1;
+			}
+			
+			.fuerWeitereInfos {
+				height: 60px;
+				position: absolute;
+				top: 60px;
+				left: 25px;
+				opacity: 0;
+				z-index: 1;
+				display: none;
+			}
+			
+        </style> 
+		
+		<!-- Eigentliche HTML- Datei ab hier -->
+		
+        <div style="margin-left:-11px">
+         	
+			<div class="sizemachine">
+				<p id="heading" >Das ist unser Betreuerteam für 2016</p>
+				<img class="fuerWeitereInfos"  src="http://file2.npage.de/014309/86/bilder/fuer_weitere_infos_klicken_miii.png"/>
+			</div>
+				
+			
+			
+			<div>
+          		<img class="beweg" id="links" src="http://file2.npage.de/014309/86/bilder/pfeil_fuer_scrollleiste_grau_links_mii.png"/>
+         	</div>
+          	<div id="over" class="overStart">
+            	<div id="slide" >
+					<div class="person" id="carolin_koepke">
+                    	<img class="vorschau" src="http://file2.npage.de/014309/86/bilder/carolin_koepke.jpg"/>
+                    	<p class="name">Carolin</p>
+                	</div> 
+                	<div class="person" id="daniel_staebler"> <!-- diese DIV braucht jeder Betreuer! Vorlage unten kopieren, ID mit der jQuery gleichsetzen und BildURL austauschen. Name rein, fertig. -->
+                    	<img class="vorschau" src="http://file2.npage.de/014309/86/bilder/daniel_staebler.jpg"/>
+                    	<p class="name">Daniel</p>
+                	</div>
+					<div class="person" id="fabian_hurler">
+                    	<img class="vorschau" src="http://file2.npage.de/014309/86/bilder/fabian_hurler.jpg"/>
+                    	<p class="name">Fabian</p>
+                	</div>
+					<div class="person" id="friederike_wagner">
+                    	<img class="vorschau" src="http://file2.npage.de/014309/86/bilder/friederike_wagner.jpg"/>
+                    	<p class="name">Friederike</p>
+                	</div>
+					<div class="person" id="heike_besenfelder">
+                    	<img class="vorschau" src="http://file2.npage.de/014309/86/bilder/heike_besenfelder.jpg"/>
+                    	<p class="name">Heike</p>
+                	</div>
+					<div class="person" id="jannik_burkhardt"> 
+                    	<img class="vorschau" src="http://file2.npage.de/014309/86/bilder/jannik_burkhardt.JPG"/>
+                    	<p class="name">Jannik</p>
+                	</div>
+					<div class="person" id="judith_wieland">
+                    	<img class="vorschau" src="http://file2.npage.de/014309/86/bilder/judith_wieland.jpg"/>
+                    	<p class="name">Judith</p>
+                	</div>
+					<div class="person" id="julian_hurler">
+                    	<img class="vorschau" src="http://file2.npage.de/014309/86/bilder/julian_hurler.jpg"/>
+                    	<p class="name">Julian H.</p>
+                	</div>
+					<div class="person" id="julian_ludwig"> 
+                    	<img class="vorschau" src="http://file2.npage.de/014309/86/bilder/julian_ludwig.jpg"/>
+                    	<p class="name">Julian L.</p>
+                	</div>
+					<div class="person" id="kathrin_krautwasser">
+                    	<img class="vorschau" src="http://file2.npage.de/014309/86/bilder/kathrin_krautwasser.JPG"/>
+                    	<p class="name">Kathrin K.</p>
+					</div>
+					<div class="person" id="kathrin_staebler">
+                    	<img class="vorschau" src="http://file2.npage.de/014309/86/bilder/kathrin_staebler.jpg"/>
+                    	<p class="name">Kathrin S.</p>
+					</div>
+					<div class="person" id="moritz_hurler">
+                    	<img class="vorschau" src="http://file2.npage.de/014309/86/bilder/moritz_hurler.jpg"/>
+                    	<p class="name">Moritz</p>
+                	</div>
+					<div class="person" id="nadja_vincon">
+                    	<img class="vorschau" src="http://file2.npage.de/014309/86/bilder/nadja_vincon.jpg"/>
+                    	<p class="name">Nadja</p>
+                	</div>
+					<div class="person" id="simon_hurler">
+                    	<img class="vorschau" src="http://file2.npage.de/014309/86/bilder/simon_hurler.jpg"/>
+                    	<p class="name">Simon H.</p>
+                	</div>
+					<div class="person" id="sonja_koschei">
+                    	<img class="vorschau" src="http://file2.npage.de/014309/86/bilder/sonja_koschei.jpg"/>
+                    	<p class="name">Sonja</p>
+                	</div>
+				 	<div class="person" id="theresa_renz"> 
+                    	<img class="vorschau" src="http://file2.npage.de/014309/86/bilder/theresa_renz.jpg"/>
+                    	<p class="name">Theresa</p>
+                	</div>
+					<div class="platzhalter" >
+                    	<img class="vorschau" src="http://file2.npage.de/014309/86/bilder/simon_lehmler.jpg" title="Hat seinen Steckbrief immer noch nicht eingereicht, der Schlamper!"/>
+                    	<p class="name">Simon L.</p>
+					</div>
+					<div class="platzhalter" >
+                    	<img class="vorschau" src="http://file2.npage.de/014309/86/bilder/platzhalter.jpg" title="War recht kurzfristig dabei, deswegen hat er noch keinen Steckbrief..."/>
+                    	<p class="name">Adrian B.</p>
+					</div>
+			<!--		<div class="person" id="simon_l">
+                    	<img class="vorschau" src="https://iutv.de/sites/default/files/styles/moderator_detail/public/guenther-jauch_390_360.png?itok=srcTd08r"/>
+                    	<p class="name">Simon L.</p>
+                	</div>
+					<div class="person" id="XX">
+                    	<img class="vorschau" src="https://iutv.de/sites/default/files/styles/moderator_detail/public/guenther-jauch_390_360.png?itok=srcTd08r"/>
+                    	<p class="name">XX</p>
+                	</div> Dieses Element Kopieren -->
+            	</div>
+         		<div>
+          			<img class="beweg" id="rechts" src="http://file2.npage.de/014309/86/bilder/pfeil_fuer_scrollleiste_grau_rechts_mii.png"/>
+         		</div>
+       		</div>
+        
+			<!-- Das folgende einfach so lassen! -->
+
+				
+			
+            <div class="container">    
+                <p class="category" id="name">
+                </p>
+                <p class="category" id="age">
+                Alter:
+            	</p>
+                <p class="category" id="home">
+                Wohnort:
+            	</p>
+                <div class="category" id="text">
+                </div>
+                <div id="bild">
+                </div>
+            	<div>
+					<img  class="backbutton" src="http://file2.npage.de/014309/86/bilder/zurueck_zur_uebersicht.png" alt=""/>
+					<p id="backtoview" >Zurück zur Übersicht</p>
+			</div>
+			</div>
+			
+        </div>
+        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>   
+        <script language="javascript" type="text/javascript">
+        
+            var nameAktiv;
+            var wohnortAktiv;
+            var textAktiv;
+			var bildURLAktiv;
+            
+			var bDayAktiv;
+			var d = new Date();
+			var age;
+			
+			var c = document.getElementById('slide').children.length ;
+			
+            $(document).ready(function() {		
+				
+				var betreuer = c - 5; 	
+            	var nummer = 0;
+				var distance = 131 * 4				//Wie groß die Distanz pro Klick ist (in px)
+				
+				$('.fuerWeitereInfos').delay(4000).css("display", "block").animate({opacity: '1'},2000)
+												// Delay(x) ist die Verzögerung der "Für weitere Infos klicken"- Tafel
+				
+				var h = c / 4; 
+					h = Math.ceil(h);
+				var pxStart = h * 156;
+				
+				$('.overStart').css("height", pxStart );
+					
+                $('#links').click(function() { //Verantwortlich für die Bewegung der Übersichtsleiste
+                     if(nummer > 1) {
+                     	nummer -= 1;    
+                     	$('.slide').animate({left: '+='+ distance+'px'});
+						$('#rechts').show().animate({opacity: '1'},500);
+                     } else if (nummer == 1) {
+						nummer -= 1;
+                     	$('.slide').animate({left: '+='+ distance +'px'});
+						$('#links').animate({opacity: '0'},500).promise().done(hide());
+					};
+                });
+                
+                $('#rechts').click(function() {
+                    if(nummer < h-2)   {
+                     	nummer += 1;
+                     	$('.slide').animate({left: '-='+ distance +'px'});
+						$('#links').show().animate({opacity: '1'},500);
+                    } else if (nummer == h-2) {
+						nummer += 1;
+                     	$('.slide').animate({left: '-='+ distance +'px'});
+						$('#rechts').animate({opacity: '0'}, 500).promise().done(hide());
+					};
+                });                
+				
+				$('.person').click(function() { 	//Sorgt für Startseite mit Übersicht über alle Betreuer
+					$('#slide').removeClass('startPage').addClass('slide');
+					$('#over').removeClass('overStart').addClass('over').css("height","156px");
+					$('.sizemachine').addClass('shrink');
+					$('#heading').animate({opacity: '0'},300);
+					$('.backbutton').delay(700).animate({opacity: '.7'},500);
+					$('.fuerWeitereInfos').stop().css("display", "none");
+					if (nummer == 0) {
+						$('#rechts').animate({opacity: '1'},500);
+					};
+				});
+				
+				$('.backbutton').click(function() {
+					$('.backbutton').animate({opacity: '0'},200);
+					$('#slide').css({left: '100px'}).removeClass('slide').addClass('startPage');
+					nummer = 0;
+					$('#over').removeClass('over').addClass('overStart').css("height", pxStart);
+					$('.sizemachine').removeClass('shrink');
+					$('.container').hide().css({opacity: '0'});
+					$('#heading').delay(1100).animate({opacity: '1'},500);
+					$('.beweg').animate({opacity: '0'},200).promise().done(hide());
+				});
+				
+				$('.backbutton').hover(function() {
+					$('#backtoview').animate({opacity: '.7'}, {queue: false});
+				}, 
+				function() {
+					$('#backtoview').delay(2000).animate({opacity: '0'}, 1000);
+				});
+				
+				function calculateIt() {
+					var day = bDayAktiv[0];
+					var month = bDayAktiv[1];
+					var year = bDayAktiv[2];
+					age = d.getFullYear() - year;
+					if (d.getMonth() < (month - 1)) {
+						age = age - 1;
+						age = age + " Jahre";
+					}
+					else if (d.getMonth() == (month-1)) {;
+						if(d.getDate() < day) {
+							age = age - 1;
+							age = age + ", aber bald "+ (age + 1) + "!";
+						}
+						else if (d.getDate() == day) {
+							age = "Ab heute "+ age +"! Herzlichen Glückwunsch!";
+						}
+						else {
+							age = age + " Jahre";
+						};
+					}
+					else {
+						age = age + " Jahre";
+					};
+				}; 					// Rechnet das Alter anhand des Geburtsdatums in der [TT,MM,JJJJ]- Form (beachte das Komma) aus.
+				
+                function einsetzen() {
+					$('.info').remove();						// Entfernt vorherige Einträge (mehrere Profile nacheinander)
+					$('.container').show().animate({opacity: '1'},500);
+                    $('p#name').append('<h1 class="info">'+ nameAktiv +'</h1>');
+                    $('p#age').append('<p class="info" title="Immer aktuell!">'+ age +'</p>');
+                    $('p#home').append('<p class="info">'+ wohnortAktiv +'</p>');
+                    $('div#text').append('<p class="info">'+ textAktiv +'</p>');
+					$('div#bild').append('<img class="info" id="imgBig" src="' + bildURLAktiv + '" alt="___________________________________________________ __________________________________________ _________________________________ ____________________________________________ Unsere IT- Profis haben mir versichert dass hier jetzt das Bild ist. DANI WARUM IST HIER KEIN BILD?!"/>')
+                };
+				
+                // Daten der Betreuer 
+                
+				$('#carolin_koepke').click(function() {					// Name der Variablen, in der HTML Verankert
+                    nameAktiv = "Carolin Köpke";			// Name des Betreuers
+                    bDayAktiv = [03,03,1991];					// Geburtstag [TT,MM,JJJJ]
+                    wohnortAktiv = "Nürtingen";
+                    textAktiv = "Ich bin Jugendreferentin in der Gesamtkirchengemeinde und dieses Jahr zum ersten Mal beim Zeltlager dabei. Ich freue mich auf actionreiche Tage, viel Spaß und einmalige Zeltlagermomente!";
+					bildURLAktiv = "http://file2.npage.de/014309/86/bilder/carolin_koepke.jpg"; // Das Bild, dass groß angezeigt wird
+                    calculateIt();								// Berechnet das Alter anhand des Geburtsdatums
+					einsetzen();								// ruft die Funktion auf wo die Daten in die HTML gepusht werden (unter den Daten)
+                }); 		//ok
+                $('#daniel_staebler').click(function() {					// Name der Variablen, in der HTML Verankert
+                    nameAktiv = "Daniel <span title='Bruder von Kathrin'>Stäbler</>";			// Name des Betreuers
+                    bDayAktiv = [17,05,1997];					// Geburtstag [TT,MM,JJJJ]
+                    wohnortAktiv = "Kirchheim unter Teck";
+                    textAktiv = "Ich bin zum dritten Mal als Leiter dabei und werde dieses Jahr wieder in der Küche stehen.";
+					bildURLAktiv = "http://file2.npage.de/014309/86/bilder/daniel_staebler.jpg"; // Das Bild, dass groß angezeigt wird
+                    calculateIt();								// Berechnet das Alter anhand des Geburtsdatums
+					einsetzen();								// ruft die Funktion auf wo die Daten in die HTML gepusht werden (unter den Daten)
+                }); 		//ok
+				$('#fabian_hurler').click(function() {
+                    nameAktiv = "Fabian <span title='Oh ja, die Hurlers sind alle verwandt!'>Hurler</>";
+                    bDayAktiv = [06,01,1995];
+                    wohnortAktiv = "Kirchheim unter Teck"
+                    textAktiv = "Ich studiere Psychologie im schönen Tübingen und bin dieses Jahr zum fünften Mal als Zeltleiter dabei. Außerdem mache ich zum dritten Mal die Lagerleitung. Sommer und Zeltlager, das gehört für mich zusammen wie Winter und Schlittenfahren. Ich freue mich schon auf zwei tolle und (hoffentlich) sonnige Wochen mit euch!";
+					bildURLAktiv = "http://file2.npage.de/014309/86/bilder/fabian_hurler.jpg";
+                    calculateIt();
+                    einsetzen();
+                });		//ok
+				$('#friederike_wagner').click(function() {
+                    nameAktiv = "Friederike Wagner";
+                    bDayAktiv = [09,06,1997];
+                    wohnortAktiv = "Kirchheim unter Teck"
+                    textAktiv = "Ich bin zum dritten Mal dabei, zum zweiten Mal in der Küche. Zeltlager macht einfach Spaß - Super!";
+					bildURLAktiv = "http://file2.npage.de/014309/86/bilder/friederike_wagner.jpg";
+                    calculateIt();
+                    einsetzen();
+                });
+				$('#heike_besenfelder').click(function() {
+                    nameAktiv = "Heike Besenfelder";
+                    bDayAktiv = [10,09,1996];
+                    wohnortAktiv = "Notzingen"
+                    textAktiv = "Gerade mache ich die Ausbildung zur Erzieherin, da ich gerne mit Kindern und Jugendlichen zusammenarbeite. Auf eine schöne Zeit im Zeltlager!";
+					bildURLAktiv = "http://file2.npage.de/014309/86/bilder/heike_besenfelder.jpg";
+                    calculateIt();
+                    einsetzen();
+                });		//ok
+                $('#jannik_burkhardt').click(function() {
+                    nameAktiv = "Jannik Burkhardt";
+                    bDayAktiv = [18,03,1997];
+                    wohnortAktiv = "Weilheim"
+                    textAktiv = "Obwohl ich als Kind nie in einem Zeltlager war, bin ich in den letzten zwei Jahren zum Fan geworden. Ich habe sehr viel Spaß am Zeltlager, und dieses Jahr mache ich zum ersten Mal mit die Lagerleitung!";
+					bildURLAktiv = "http://file2.npage.de/014309/86/bilder/jannik_burkhardt.JPG";
+                    calculateIt();
+					einsetzen();
+                });		//ok
+				$('#judith_wieland').click(function() {
+                    nameAktiv = "Judith Wieland";
+                    bDayAktiv = [13,02,1992];
+                    wohnortAktiv = "Unter der Woche Schwäbisch Gmünd und am Wochenende Linsenhofen"
+                    textAktiv = "Grundschulstudentin; verrückt und für jeden Spaß zu haben :D";
+					bildURLAktiv = "http://file2.npage.de/014309/86/bilder/judith_wieland.jpg";
+                    calculateIt();
+                    einsetzen();
+                });		//ok
+				$('#julian_hurler').click(function() {
+                    nameAktiv = "Julian <span title='Oh ja, die Hurlers sind alle verwandt!'>Hurler</>";
+                    bDayAktiv = [03,04,1998];
+                    wohnortAktiv = "Ötlingen"
+                    textAktiv = "Ich bin jetzt zum 3. Mal als Leiter im Zeltlager dabei und war auch schon als Kind 2 Mal mit. In meiner Freizeit bin ich zusätzlich noch als Jugendtrainer in einem Judoverein tätig.";
+					bildURLAktiv = "http://file2.npage.de/014309/86/bilder/julian_hurler.jpg";
+                    calculateIt();
+                    einsetzen();
+                });	//ok
+				$('#julian_ludwig').click(function() {
+                    nameAktiv = "Julian Ludwig";
+                    bDayAktiv = [10,07,1997];
+                    wohnortAktiv = "Jesingen"
+                    textAktiv = "Am Lagerfeuer spiele ich oft Gitarre; dieses Jahr wird mein 3. Jahr als Leiter im Zeltlager, aber auch als Kind war ich schon ein paar Mal dabei!";
+					bildURLAktiv = "http://file2.npage.de/014309/86/bilder/julian_ludwig.jpg";
+                    calculateIt();
+					einsetzen();
+                });	//ok
+				$('#kathrin_krautwasser').click(function() {
+                    nameAktiv = "Kathrin Krautwasser";
+                    bDayAktiv = [24,12,1996];
+                    wohnortAktiv = "München"
+                    textAktiv = "Ich studiere Geschichte und VWL in Augsburg, in meiner Freizeit spiele ich Fußball und trainiere eine Mädchenmannschaft. Im Zeltlager bin ich dieses Jahr zum zweiten Mal als Betreuerin dabei, bin aber auch als Teilnehmerin schon zweimal dabei gewesen. Für Lagerfeuer, Geländespiele, Wasserschlachten und jede Menge Spaß lohnt es sich jedes Jahr aufs Neue von München zum ZeLa anzureisen.";
+					bildURLAktiv = "http://file2.npage.de/014309/86/bilder/kathrin_krautwasser.JPG";
+                    calculateIt();
+                    einsetzen();
+                });		//ok
+				$('#kathrin_staebler').click(function() {
+                    nameAktiv = "Kathrin <span title='Schwester von Daniel'>Stäbler</>";
+                    bDayAktiv = [22,03,2000];
+                    wohnortAktiv = "Kirchheim unter Teck"
+                    textAktiv = "Ich bin dieses Jahr zum ersten Mal im Zeltlager als Betreuer dabei. Als Kind war ich nie im Zeltlager, deshalb freue ich mich sehr, dass ich dieses Jahr mitkommen kann, da ich gerne mit Kindern zusammenarbeite.";
+					bildURLAktiv = "http://file2.npage.de/014309/86/bilder/kathrin_staebler.jpg";
+                    calculateIt();
+                    einsetzen();
+                });		//ok
+				$('#marc-andre_boehm').click(function() {
+                    nameAktiv = "Marc-André Böhm";
+                    bDayAktiv = [16,02,1997];
+                    wohnortAktiv = "Esslingen am Neckar"
+                    textAktiv = "Ich bin ein sehr lebensfreudiger Mensch, dem das Arbeiten mit Kindern viel Freude bereitet. Meine Hobbys sind Fußball spielen und Fahrrad fahren. Generell bin ich ein Sportbegeisterter Mensch, der gerne neue Sachen ausprobiert. Kreativität und Verantwortung gehören zu meinen größten Stärken.";
+					bildURLAktiv = "http://file2.npage.de/014309/86/bilder/marc-andre_boehm.jpg";
+                    calculateIt();
+                    einsetzen();
+                });
+				$('#moritz_hurler').click(function() {
+                    nameAktiv = "Moritz <span title='Oh ja, die Hurlers sind alle verwandt!'>Hurler</>";
+                    bDayAktiv = [17,10,2000];
+                    wohnortAktiv = "Kirchheim / Ötlingen"
+                    textAktiv = "Als Kind war ich bereits vier mal mit im Zeltlager dabei und freue mich dieses Jahr besonders dass ich zum ersten Mal als Leiter mit in die Küche gehen darf. In meiner Freizeit spiele ich gerne Gitarre und mache Kampfsport, dort trainiere ich auch selber eine Kindergruppe.";
+					bildURLAktiv = "http://file2.npage.de/014309/86/bilder/moritz_hurler.jpg";
+                    calculateIt();
+                    einsetzen();
+                });		//ok
+				$('#nadja_vincon').click(function() {
+                    nameAktiv = "Nadja Vin<span title='Sogar mit Sonderzeichen, wow'>&ccedil;</>on";
+                    bDayAktiv = [03,06,1992];
+                    wohnortAktiv = "Ludwigsburg"
+                    textAktiv = "Mein Name ist Nadja und ich war letztes Jahr zum ersten mal ZeLa-Leiterin, das hat mir so viel Spaß gemacht, dass ich mich schon sehr auf den kommenden Sommer freue. Ich arbeite gerne mit Kindern zusammen, deshalb studiere ich auch Lehramt. Neben dem Studium arbeite ich in einem Klamottenladen. In meiner Freizeit unternehme ich viel mit Freunden, gehe tanzen, auf Konzerte oder ins Kino. Wenn ich es mal ruhiger haben will, lese ich ein gutes Buch oder male und bastle.";
+					bildURLAktiv = "http://file2.npage.de/014309/86/bilder/nadja_vincon.jpg";
+                    calculateIt();
+                    einsetzen();
+                });		//ok
+				$('#simon_hurler').click(function() {
+                    nameAktiv = "Simon <span title='Oh ja, die Hurlers sind alle verwandt!'>Hurler</>";
+                    bDayAktiv = [04,04,1995];
+                    wohnortAktiv = "Tübingen"
+                    textAktiv = "Ich bin seit vielen Jahren großer Zela-fan und freue mich wie einst auf zwei Wochen Spaß in der Natur. Dieses Jahr übernehme ich zum dritten Mal einen Teil der Lagerleitung.";
+					bildURLAktiv = "http://file2.npage.de/014309/86/bilder/simon_hurler.jpg";
+                    calculateIt();
+                    einsetzen();
+                });		//ok
+				$('#simon_lehmler').click(function() {
+                    nameAktiv = "<span title='Besser bekannt als Limon'>Simon Lehmler</>";
+                    bDayAktiv = "so 16?";
+                    wohnortAktiv = "Ludwigsburg"
+                    textAktiv = "Schon als Kind war das Zeltlager ein Highlight im Sommer. Dieses Jahr werde ich zum 3ten mal ein Mädchenzelt übernehmen und freue mich auf ein paar sonnige und spaßige Tage im Zeltlager.";
+					bildURLAktiv = "http://file2.npage.de/014309/86/bilder/simon_lehmler.jpg";
+                    calculateIt();
+                    einsetzen();
+                });
+				$('#sonja_koschei').click(function() {
+                    nameAktiv = "Sonja Koschei";
+                    bDayAktiv = [05,02,1999];
+                    wohnortAktiv = "Kirchheim / Lindorf"
+                    textAktiv = "Momentan geh ich auf das Ludwig Uhland Gymnasium in die 11. Klasse. Ich war schon dreimal als Kind dabei und zweimal als Betreuer. Am meisten gefallen mir die Geländespiele und das Singen am Lagerfeuer.";
+					bildURLAktiv = "http://file2.npage.de/014309/86/bilder/sonja_koschei.jpg";
+                    calculateIt();
+                    einsetzen();
+                });		//ok
+                $('#theresa_renz').click(function() {
+                    nameAktiv = "Theresa Renz";
+                    bDayAktiv = [01,05,1999];
+                    wohnortAktiv = "Lenningen"
+                    textAktiv = "Schon als Kind war das Zeltlager ein Highlight im Sommer. Dieses Jahr werde ich zum 3ten mal ein Mädchenzelt übernehmen und freue mich auf ein paar sonnige und spaßige Tage im Zeltlager.";
+					bildURLAktiv = "http://file2.npage.de/014309/86/bilder/theresa_renz.jpg";
+                    calculateIt();
+					einsetzen();
+                });		//ok
+			});
+				
+        </script>
+        
+    </body>
+</html>
